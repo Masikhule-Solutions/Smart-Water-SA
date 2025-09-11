@@ -1,10 +1,9 @@
-name: Deploy Vite App to GitHub Pages
+name: Deploy Vite React App to GitHub Pages
 
-# 👇 This is what was missing!
 on:
   push:
     branches:
-      - main
+      - main  # Trigger deploy on pushes to main branch
 
 jobs:
   build-and-deploy:
@@ -14,15 +13,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Build project
+      - name: Fix permissions on vite binary (workaround for permission issues)
+        run: chmod +x ./node_modules/.bin/vite
+
+      - name: Build the project
         run: npm run build
 
       - name: Deploy to GitHub Pages
