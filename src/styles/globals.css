@@ -1,0 +1,344 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 14px;
+  
+  /* Agricultural Color Palette - Earth & Farm Inspired */
+  --background: #fefdf8; /* Warm cream like fresh milk */
+  --foreground: #2d4a22; /* Deep forest green like pine trees */
+  --card: #ffffff;
+  --card-foreground: #1e3a1a; /* Rich dark green */
+  --popover: #fff8f0; /* Light cream */
+  --popover-foreground: #2d4a22;
+  
+  /* Primary colors - Agricultural greens and earth tones */
+  --primary: #4a7c59; /* Forest green like healthy crops */
+  --primary-foreground: #ffffff;
+  --secondary: #f4f1e8; /* Light wheat/straw color */
+  --secondary-foreground: #3d5a2a; /* Darker farm green */
+  
+  /* Muted tones - Soil and earth inspired */
+  --muted: #f0ebe2; /* Light soil/sand color */
+  --muted-foreground: #6b7c5c; /* Sage green */
+  --accent: #e8dcc6; /* Warm wheat/oat color */
+  --accent-foreground: #3d5a2a;
+  
+  /* Agricultural accent colors */
+  --destructive: #cc4125; /* Rustic red barn color */
+  --destructive-foreground: #ffffff;
+  --border: rgba(77, 124, 89, 0.15); /* Soft green border */
+  --input: transparent;
+  --input-background: #f8f6f0; /* Light cream for inputs */
+  --switch-background: #d4c4a8; /* Warm beige */
+  
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #4a7c59; /* Forest green focus ring */
+  
+  /* Agricultural chart colors */
+  --chart-1: #6b8e23; /* Olive drab - crops */
+  --chart-2: #228b22; /* Forest green - irrigation */
+  --chart-3: #daa520; /* Golden rod - harvest */
+  --chart-4: #8b4513; /* Saddle brown - soil */
+  --chart-5: #32cd32; /* Lime green - growth */
+  
+  --radius: 0.625rem;
+  
+  /* Sidebar agricultural theme */
+  --sidebar: #f8f6f0; /* Light cream */
+  --sidebar-foreground: #2d4a22;
+  --sidebar-primary: #4a7c59; /* Forest green */
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f0ebe2; /* Light soil */
+  --sidebar-accent-foreground: #3d5a2a;
+  --sidebar-border: #e0d5c7; /* Warm beige border */
+  --sidebar-ring: #4a7c59;
+}
+
+.dark {
+  /* Dark theme with agricultural night/barn inspired colors */
+  --background: #1a1f16; /* Deep forest night */
+  --foreground: #e8e5da; /* Light cream */
+  --card: #242920; /* Dark forest */
+  --card-foreground: #e8e5da;
+  --popover: #2a2f26;
+  --popover-foreground: #e8e5da;
+  
+  --primary: #7fb069; /* Lighter forest green */
+  --primary-foreground: #1a1f16;
+  --secondary: #3a3f36; /* Dark earth */
+  --secondary-foreground: #d4d0c4;
+  
+  --muted: #323730; /* Dark soil */
+  --muted-foreground: #a8a394; /* Light earth */
+  --accent: #3e4238;
+  --accent-foreground: #d4d0c4;
+  
+  --destructive: #e85d3d; /* Warm barn red */
+  --destructive-foreground: #1a1f16;
+  --border: rgba(123, 159, 105, 0.2); /* Soft green border */
+  --input: #3a3f36;
+  --ring: #7fb069;
+  
+  /* Dark agricultural chart colors */
+  --chart-1: #8fbc8f; /* Dark sea green */
+  --chart-2: #90ee90; /* Light green */
+  --chart-3: #f0e68c; /* Khaki */
+  --chart-4: #d2b48c; /* Tan */
+  --chart-5: #98fb98; /* Pale green */
+  
+  --sidebar: #242920;
+  --sidebar-foreground: #e8e5da;
+  --sidebar-primary: #7fb069;
+  --sidebar-primary-foreground: #1a1f16;
+  --sidebar-accent: #3a3f36;
+  --sidebar-accent-foreground: #d4d0c4;
+  --sidebar-border: #3e4238;
+  --sidebar-ring: #7fb069;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Custom Agricultural Colors */
+  --color-farm-green: #4a7c59;
+  --color-harvest-gold: #daa520;
+  --color-soil-brown: #8b4513;
+  --color-crop-green: #6b8e23;
+  --color-barn-red: #cc4125;
+  --color-wheat-cream: #f4f1e8;
+  --color-earth-tan: #d4c4a8;
+  --color-field-sage: #6b7c5c;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    /* Agricultural texture pattern */
+    background-image: 
+      radial-gradient(circle at 1px 1px, rgba(74, 124, 89, 0.15) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+}
+
+/**
+ * Base typography with agricultural feel
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      color: var(--color-foreground);
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      color: var(--color-foreground);
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      color: var(--color-foreground);
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      color: var(--color-foreground);
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+      color: var(--color-foreground);
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      color: var(--color-farm-green);
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.4;
+      color: var(--color-foreground);
+    }
+  }
+}
+
+/* Agricultural themed utility classes */
+@layer utilities {
+  .bg-farm-green {
+    background-color: var(--color-farm-green);
+  }
+  
+  .bg-harvest-gold {
+    background-color: var(--color-harvest-gold);
+  }
+  
+  .bg-soil-brown {
+    background-color: var(--color-soil-brown);
+  }
+  
+  .bg-crop-green {
+    background-color: var(--color-crop-green);
+  }
+  
+  .bg-barn-red {
+    background-color: var(--color-barn-red);
+  }
+  
+  .bg-wheat-cream {
+    background-color: var(--color-wheat-cream);
+  }
+  
+  .text-farm-green {
+    color: var(--color-farm-green);
+  }
+  
+  .text-harvest-gold {
+    color: var(--color-harvest-gold);
+  }
+  
+  .text-soil-brown {
+    color: var(--color-soil-brown);
+  }
+  
+  .text-crop-green {
+    color: var(--color-crop-green);
+  }
+  
+  .text-barn-red {
+    color: var(--color-barn-red);
+  }
+  
+  .border-farm-green {
+    border-color: var(--color-farm-green);
+  }
+  
+  .border-harvest-gold {
+    border-color: var(--color-harvest-gold);
+  }
+  
+  /* Agricultural gradient patterns */
+  .bg-farm-gradient {
+    background: linear-gradient(135deg, var(--color-farm-green), var(--color-crop-green));
+  }
+  
+  .bg-harvest-gradient {
+    background: linear-gradient(135deg, var(--color-harvest-gold), #f4a460);
+  }
+  
+  .bg-earth-gradient {
+    background: linear-gradient(135deg, var(--color-soil-brown), var(--color-earth-tan));
+  }
+  
+  /* Agricultural texture patterns */
+  .texture-soil {
+    background-image: 
+      radial-gradient(circle at 2px 2px, var(--color-soil-brown) 1px, transparent 0);
+    background-size: 15px 15px;
+  }
+  
+  .texture-crop {
+    background-image: 
+      linear-gradient(45deg, var(--color-crop-green) 25%, transparent 25%),
+      linear-gradient(-45deg, var(--color-crop-green) 25%, transparent 25%);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+  }
+  
+  /* Agricultural shadows */
+  .shadow-farm {
+    box-shadow: 0 4px 6px -1px rgba(74, 124, 89, 0.3), 
+                0 2px 4px -1px rgba(74, 124, 89, 0.15);
+  }
+  
+  .shadow-harvest {
+    box-shadow: 0 4px 6px -1px rgba(218, 165, 32, 0.3), 
+                0 2px 4px -1px rgba(218, 165, 32, 0.15);
+  }
+}
+
+html {
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+/* Agricultural loading animations */
+@keyframes grow {
+  0% { transform: scale(0.9); opacity: 0.7; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes harvest {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.animate-grow {
+  animation: grow 0.8s ease-out;
+}
+
+.animate-harvest {
+  animation: harvest 2s ease-in-out infinite;
+}
